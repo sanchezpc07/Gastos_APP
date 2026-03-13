@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Finanzly - Cargando...</title>
@@ -13,7 +14,7 @@
             try {
                 const { data: { session }, error } = await supabase.auth.getSession();
                 if (error) throw error;
-                
+
                 // Usar rutas relativas explícitas para GitHub Pages
                 if (session) {
                     window.location.href = './dashboard.html';
@@ -28,7 +29,10 @@
         checkSession();
     </script>
 </head>
-<body style="background-color: #0f172a; display: flex; align-items: center; justify-content: center; height: 100vh; color: white; font-family: sans-serif;">
+
+<body
+    style="background-color: #0f172a; display: flex; align-items: center; justify-content: center; height: 100vh; color: white; font-family: sans-serif;">
     <p>Cargando Finanzly...</p>
 </body>
+
 </html>
